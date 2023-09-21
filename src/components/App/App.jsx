@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
 //Components
 import FeelingToday from '../FeelingToday/FeelingToday';
 import Understanding from '../Understanding/Understanding';
+import Supported from '../Supported/Supported';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <div>
             <Route exact path= "/" component={FeelingToday} />
             <Route exact path= "/Understanding" component={Understanding} />
+            <Route exact path= "/Supported" component={Supported} />
         </div>
         
       </div>
