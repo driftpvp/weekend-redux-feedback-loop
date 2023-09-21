@@ -18,11 +18,13 @@ function FeelingToday({scaleCount}) {
         setNewScale(1)
     }
 
+    
+
     return (
         <div>
             <h1>How are you feeling today on a scale of 1-5?</h1>
             <input type="number" name="feeling" placeholder="Enter number 1-5"
-            value={scaleCount} onChange={event => setNewScale(event.target.value)} />
+            value={scaleCount} onInput={event => setNewScale(event.target.value)} />
             <button onClick={()=> history.push("/Understanding")}>Next</button>
         </div>
     )
