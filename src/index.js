@@ -13,32 +13,42 @@ import logger from 'redux-logger';
 
 
 //reducers
-const scaleCount = (state = 0 , action) => {
+const scaleCount = (state = 1 , action) => {
     console.log('reducer is go');
     if (action.type === 'ADD_SCALE') {
         return action.payload;
     }else if (action.type === "CLEAR") {
-        return 0;
+        return 1;
     }
     return state;
 };
 
-const Understanding = (state = 0 , action) => {
+const Understanding = (state = 1 , action) => {
     console.log('Understanding reducer is go');
     if (action.type === 'ADD_UNDERSTANDING') {
         return action.payload;
     }else if (action.type === "CLEAR") {
-        return 0;
+        return 1;
     }
     return state;
 };
 
-const Supported = (state = 0 , action) => {
+const Supported = (state = 1 , action) => {
     console.log('Support reducer is go');
     if (action.type === 'ADD_SUPPORT') {
         return action.payload;
     }else if (action.type === "CLEAR") {
-        return 0;
+        return 1;
+    }
+    return state;
+};
+
+const Comments = (state = "" , action) => {
+    console.log('Comment reducer is go');
+    if (action.type === 'ADD_COMMENT') {
+        return action.payload;
+    }else if (action.type === "CLEAR") {
+        return "";
     }
     return state;
 };
@@ -48,7 +58,8 @@ const storeInstance = createStore (
     combineReducers({
         scaleCount,
         Understanding,
-        Supported
+        Supported,
+        Comments
     }),
     applyMiddleware(logger)
 );
