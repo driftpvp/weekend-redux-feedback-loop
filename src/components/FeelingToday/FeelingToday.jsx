@@ -10,12 +10,9 @@ function FeelingToday({scaleCount}) {
 
     const history = useHistory();
 
-    const [newScale, setNewScale] = useState(1)
-
     const addFeeling = (event) => {
         event.preventDefault()
-        dispatch({type: 'ADD_SCALE', payload: newScale})
-        setNewScale(1)
+        dispatch({type: 'ADD_SCALE', payload: event.target.value})
     }
 
     
@@ -23,8 +20,8 @@ function FeelingToday({scaleCount}) {
     return (
         <div>
             <h1>How are you feeling today on a scale of 1-5?</h1>
-            <input type="number" name="feeling" placeholder="Enter number 1-5"
-            value={scaleCount} onInput={event => setNewScale(event.target.value)} />
+            <input type="number" name="feeling" placeholder="Enter number 1-5" min={1} max={5}
+            value={feelingToday} onChange={addFeeling} />
             <button onClick={()=> history.push("/Understanding")}>Next</button>
         </div>
     )

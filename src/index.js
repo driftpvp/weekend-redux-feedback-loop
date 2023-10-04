@@ -16,7 +16,9 @@ import logger from 'redux-logger';
 const scaleCount = (state = 0 , action) => {
     console.log('reducer is go');
     if (action.type === 'ADD_SCALE') {
-        return [...state, action.payload];
+        return action.payload;
+    }else if (action.type === "CLEAR") {
+        return 0;
     }
     return state;
 };
