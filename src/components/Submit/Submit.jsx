@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Submit () {
-    const dispatch = useDispatch;
-    const history = useHistory;
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     const reset = () => {
         dispatch({type: 'CLEAR' })
