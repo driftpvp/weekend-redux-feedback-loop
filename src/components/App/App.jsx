@@ -8,6 +8,7 @@ import FeelingToday from '../FeelingToday/FeelingToday';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route exact path= "/Understanding" component={Understanding} />
             <Route exact path= "/Supported" component={Supported} />
             <Route exact path= "/Comments" component={Comments} />
+            <Route exact path= "/Review" component={Review} />
         </div>
         
       </div>

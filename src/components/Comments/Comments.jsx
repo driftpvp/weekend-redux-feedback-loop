@@ -16,7 +16,7 @@ function Comments() {
 
     return (
         <div>
-            <h1>Comments</h1>
+            <h1>Comments before you go?</h1>
             <input type="text" name="feeling"
             value={comments} onChange={addComment} />
             <button onClick={()=> history.push("/Review")}>Next</button>
