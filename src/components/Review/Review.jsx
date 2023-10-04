@@ -12,7 +12,7 @@ function Review() {
     const history = useHistory();
 
     const review = () => {
-        axios.post("/feedback", {
+        axios.post("/feedbackloop", {
             feeling: feelingToday,
             understanding: understandToday,
             support: support,

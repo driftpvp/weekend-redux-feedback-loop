@@ -9,6 +9,7 @@ import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Submit from '../Submit/Submit';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route exact path= "/Supported" component={Supported} />
             <Route exact path= "/Comments" component={Comments} />
             <Route exact path= "/Review" component={Review} />
+            <Route exact path= "/Submit" component={Submit} />
         </div>
         
       </div>
