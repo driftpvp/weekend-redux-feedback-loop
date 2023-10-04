@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 
-//reducer
+//reducers
 const scaleCount = (state = 0 , action) => {
     console.log('reducer is go');
     if (action.type === 'ADD_SCALE') {
@@ -23,10 +23,32 @@ const scaleCount = (state = 0 , action) => {
     return state;
 };
 
+const Understanding = (state = 0 , action) => {
+    console.log('Understanding reducer is go');
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return action.payload;
+    }else if (action.type === "CLEAR") {
+        return 0;
+    }
+    return state;
+};
+
+const Supported = (state = 0 , action) => {
+    console.log('Support reducer is go');
+    if (action.type === 'ADD_SUPPORT') {
+        return action.payload;
+    }else if (action.type === "CLEAR") {
+        return 0;
+    }
+    return state;
+};
+
 //store
 const storeInstance = createStore (
     combineReducers({
-        scaleCount
+        scaleCount,
+        Understanding,
+        Supported
     }),
     applyMiddleware(logger)
 );

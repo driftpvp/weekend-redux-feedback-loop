@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function FeelingToday({scaleCount}) {
+function FeelingToday() {
     const feelingToday = useSelector(store => store.scaleCount);
 
     const dispatch = useDispatch();
